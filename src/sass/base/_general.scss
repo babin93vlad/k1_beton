@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%; //1rem = 10px ; 10/16 = 62.5%
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	background-image: url(../../img/background.png);
+}
+
+.container {
+	width: 144rem;
+	margin: 0 auto;
+
+	@media only screen and (max-width: $bp-smallest) {
+		max-width: 50rem;
+	}
+}

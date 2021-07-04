@@ -1,0 +1,52 @@
+.title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem 0;
+
+	@media only screen and (max-width: $bp-smallest) {
+		justify-content: space-between;
+	}
+
+	&:hover h2 {
+		color: $color-orange;
+	}
+
+	&:hover svg {
+		fill: $color-orange;
+	}
+	&__subheader {
+		font-family: "Ubuntu Bold";
+		font-size: 3rem;
+		color: $color-black-light;
+		text-transform: uppercase;
+		margin-left: 2rem;
+
+		@media only screen and (max-width: $bp-smallest) {
+			margin-left: 2rem;
+			font-size: 1.6rem;
+		}
+	}
+
+	&__subheader-light {
+		font-family: "Ubuntu Bold";
+		font-size: 3rem;
+		color: $color-primary;
+		text-transform: uppercase;
+	}
+
+	&__arrow {
+		fill: $color-black-light;
+		width: 1.5rem;
+		height: 1.5rem;
+		margin-left: 1rem;
+
+		@media only screen and (max-width: $bp-smallest) {
+			margin-right: 2rem;
+		}
+	}
+
+	&:hover {
+		color: $color-orange;
+	}
+}

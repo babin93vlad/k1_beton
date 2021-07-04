@@ -1,0 +1,75 @@
+.menu {
+	display: flex;
+	align-items: center;
+	background-color: $color-grey-light-2;
+	width: 83.4rem;
+	height: 8.6rem;
+	margin: 0 auto;
+	margin-top: 10.5rem;
+	border-radius: 5rem;
+	box-shadow: 0 0.2rem 0.6rem rgba($color-black, 0.1);
+	animation: moveToTop 1s ease-out 0.4s;
+	animation-fill-mode: backwards;
+
+	@media only screen and (max-width: $bp-smallest) {
+		display: none;
+	}
+
+	&__list {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		list-style: none;
+		padding: 0 4rem;
+	}
+
+	&__item {
+		width: 12rem;
+		display: flex;
+
+		justify-content: center;
+	}
+
+	&__link {
+		display: inline-block;
+		text-align: center;
+		padding-top: 2rem;
+		margin-bottom: 1rem;
+		font-family: "Ubuntu Regular";
+		font-size: 1.43rem;
+		color: $color-secondary;
+		text-transform: uppercase;
+		letter-spacing: 0.1px;
+		text-decoration: none;
+		transition: all 0.5s;
+		overflow: hidden;
+
+		&:hover {
+			font-family: "Ubuntu Bold";
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			border-bottom: 5px solid orange;
+			transform: translateX(-100%);
+			background: $color-orange;
+			transition: transform 0.3s;
+		}
+
+		&:hover::after {
+			transform: translateX(0);
+		}
+	}
+
+	&__part {
+		margin-left: -0.7rem;
+		font-size: 1.9rem;
+	}
+}
+
+// .active {
+// 	font-family: "Ubuntu Bold";
+// 	color: $color-black-light;
+// 	border-bottom: 5px solid $color-orange;

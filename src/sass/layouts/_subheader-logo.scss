@@ -1,0 +1,16 @@
+.subheader-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 7.9rem;
+
+	&__logo {
+		width: 204px;
+		height: 100px;
+
+		@media only screen and (max-width: $bp-smallest) {
+			width: 12.3rem;
+			height: 6.7rem;
+		}
+	}
+}
