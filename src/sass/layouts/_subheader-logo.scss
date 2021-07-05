@@ -4,6 +4,10 @@
 	justify-content: center;
 	margin-top: 7.9rem;
 
+	@media only screen and (max-width: $bp-smallest) {
+		margin-top: 3rem;
+	}
+
 	&__logo {
 		width: 204px;
 		height: 100px;

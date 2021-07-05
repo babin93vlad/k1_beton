@@ -9,18 +9,36 @@
 html {
 	font-size: 62.5%; //1rem = 10px ; 10/16 = 62.5%
 	box-sizing: border-box;
+
+	@media only screen and (max-width: $bp-largest) {
+		font-size: 50%;
+	}
 }
 
 body {
 	font-family: "Roboto", sans-serif;
 	background-image: url(../../img/background.png);
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 .container {
 	width: 144rem;
 	margin: 0 auto;
 
+	@media only screen and (max-width: $bp-laptop) {
+		max-width: 100%;
+		width: 100%;
+		margin: 0;
+	}
+
+	@media only screen and (max-width: $bp-largest) {
+		max-width: 100%;
+		width: 100%;
+		margin: 0;
+	}
+
 	@media only screen and (max-width: $bp-smallest) {
-		max-width: 50rem;
+		margin: 0;
 	}
 }

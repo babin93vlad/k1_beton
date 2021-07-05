@@ -1,37 +1,29 @@
 .product-about {
 	display: flex;
-	justify-content: space-between;
 	margin-top: 7.3rem;
-
-	@media only screen and (max-width: $bp-smallest) {
-		overflow: hidden;
-	}
+	justify-content: space-evenly;
 
 	&__card {
-		position: relative;
+		display: flex;
+		flex-direction: column;
 		background-color: $color-white;
-		width: 47.7rem;
+		width: 33%;
 		height: 62.2rem;
 		overflow: hidden;
-
-		@media only screen and (max-width: $bp-smallest) {
-			display: flex;
-		}
 	}
 
 	&__img {
-		width: 100%;
-		height: 53rem;
+		box-sizing: content-box;
+		height: 50rem;
+
+		@media only screen and (max-width: $bp-smallest) {
+			height: 24rem;
+		}
 	}
 
 	&__descr {
-		position: absolute;
-		bottom: 5.6rem;
-		left: 4.8rem;
-		width: 37.8rem;
-		height: 10.1rem;
-		border-radius: 2rem;
-		background-color: $color-white;
+		width: 100%;
+		height: 15rem;
 		animation: appears 0.6s ease-in 0.4s;
 
 		animation-fill-mode: backwards;
@@ -39,7 +31,7 @@
 
 	&__text {
 		margin: 0 auto;
-		padding-top: 3.7rem;
+		padding: 3rem;
 		height: 6rem;
 
 		font-family: "Roboto", sans-serif;

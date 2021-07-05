@@ -11,10 +11,6 @@
 	animation: moveToTop 1s ease-out 0.4s;
 	animation-fill-mode: backwards;
 
-	@media only screen and (max-width: $bp-smallest) {
-		display: none;
-	}
-
 	&__list {
 		width: 100%;
 		display: flex;
@@ -69,7 +65,8 @@
 	}
 }
 
-// .active {
-// 	font-family: "Ubuntu Bold";
-// 	color: $color-black-light;
-// 	border-bottom: 5px solid $color-orange;
+.active {
+	font-family: "Ubuntu Bold";
+	color: $color-black-light;
+	border-bottom: 5px solid $color-orange;
+}

@@ -4,11 +4,8 @@
 
 	&__video,
 	&__bg {
+		box-sizing: content-box;
 		width: 100%;
 		object-fit: cover;
-	}
-
-	&__bg {
-		margin-bottom: -1rem;
 	}
 }
