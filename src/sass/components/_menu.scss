@@ -11,6 +11,10 @@
 	animation: moveToTop 1s ease-out 0.4s;
 	animation-fill-mode: backwards;
 
+	@media only screen and (max-width: $bp-laptop) {
+		display: none;
+	}
+
 	&__list {
 		width: 100%;
 		display: flex;
@@ -22,27 +26,33 @@
 
 	&__item {
 		width: 12rem;
-		display: flex;
+		display: inline-flex;
 
 		justify-content: center;
 	}
 
 	&__link {
-		display: inline-block;
-		text-align: center;
-		padding-top: 2rem;
-		margin-bottom: 1rem;
-		font-family: "Ubuntu Regular";
-		font-size: 1.43rem;
 		color: $color-secondary;
-		text-transform: uppercase;
-		letter-spacing: 0.1px;
-		text-decoration: none;
-		transition: all 0.5s;
-		overflow: hidden;
+		&:link,
+		&:active,
+		&:focus {
+			display: inline-block;
+			text-align: center;
+			padding-top: 2rem;
+			margin-bottom: 1rem;
+			font-family: "Ubuntu Regular";
+			font-size: 1.43rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1px;
+			text-decoration: none;
+			transition: all 0.5s;
+			overflow: hidden;
+		}
 
 		&:hover {
+			color: $color-secondary;
 			font-family: "Ubuntu Bold";
+			text-decoration: none;
 		}
 
 		&::after {
@@ -63,10 +73,9 @@
 		margin-left: -0.7rem;
 		font-size: 1.9rem;
 	}
-}
 
-.active {
-	font-family: "Ubuntu Bold";
-	color: $color-black-light;
-	border-bottom: 5px solid $color-orange;
+	.active {
+		font-family: "Ubuntu Bold";
+		border-bottom: 5px solid $color-orange;
+	}
 }
