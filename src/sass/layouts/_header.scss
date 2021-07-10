@@ -4,4 +4,8 @@ header {
 	display: flex;
 	align-items: center;
 	width: 100%;
+
+	@media only screen and (max-width: $bp-small) {
+		height: 9rem;
+	}
 }
