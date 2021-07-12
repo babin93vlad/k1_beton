@@ -1,3 +1,24 @@
+$color-grey-light: #d3d3d3;
+$color-grey-light-2: #f8f8f8;
+
+$color-orange: #f8a319;
+
+$color-primary: #2e2e2e;
+
+$color-secondary: #1e1e1e;
+
+$color-black: #000000;
+$color-black-light: #353433;
+
+$color-white: #ffffff;
+
+$bp_laptop: 90em; //1440px
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 21.87em; //350px
+
 *,
 *::before,
 *::after {
@@ -10,8 +31,24 @@ html {
 	font-size: 62.5%; //1rem = 10px ; 10/16 = 62.5%
 	box-sizing: border-box;
 
-	@media only screen and (max-width: $bp-largest) {
+	@media only screen and (max-width: $bp-laptop) {
 		font-size: 50%;
+	}
+
+	@media only screen and (max-width: $bp-largest) {
+		font-size: 45%;
+	}
+
+	@media only screen and (max-width: $bp-large) {
+		font-size: 40%;
+	}
+
+	@media only screen and (max-width: $bp-medium) {
+		font-size: 35%;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		font-size: 30%;
 	}
 }
 
@@ -27,12 +64,6 @@ body {
 	margin: 0 auto;
 
 	@media only screen and (max-width: $bp-laptop) {
-		max-width: 100%;
-		width: 100%;
-		margin: 0;
-	}
-
-	@media only screen and (max-width: $bp-largest) {
 		max-width: 100%;
 		width: 100%;
 		margin: 0;

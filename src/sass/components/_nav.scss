@@ -2,6 +2,15 @@
 .nav-footer {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+
+	&__link {
+		@media only screen and (max-width: $bp-small) {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+	}
 
 	&__logo {
 		margin-left: 0.7rem;
@@ -9,7 +18,7 @@
 		height: 7.2rem;
 
 		@media only screen and (max-width: $bp-small) {
-			margin-left: 10rem;
+			margin-left: 12rem;
 		}
 	}
 
@@ -20,8 +29,6 @@
 		justify-content: space-between;
 
 		@media only screen and (max-width: $bp-small) {
-			display: flex;
-			justify-content: space-evenly;
 		}
 	}
 	&__icon {
@@ -131,6 +138,8 @@
 	}
 }
 
+// ***********************************************NAVIGATION***********************8
+
 .navigation {
 	&__checkbox {
 		display: none;
@@ -160,7 +169,7 @@
 			top: -0.8rem;
 		}
 		&::after {
-			top: 0.8rem;
+			top: 1rem;
 		}
 	}
 
@@ -178,13 +187,14 @@
 
 		@media only screen and (max-width: $bp-small) {
 			display: block;
-			top: 2rem;
-			left: 3rem;
+			box-sizing: content-box;
+			top: 1rem;
+			left: 2rem;
 		}
 	}
 
 	&__btn:hover &__icon::before {
-		top: -1rem;
+		top: -2rem;
 	}
 	&__btn:hover &__icon::after {
 		top: 1rem;
@@ -202,26 +212,29 @@
 	}
 
 	&__bg {
+		display: none;
 		width: 5rem;
 		height: 5rem;
-		opacity: 0;
-		left: 4rem;
+		left: 3rem;
 		top: 2.5rem;
 		border-radius: 50%;
 		position: fixed;
 		background-image: radial-gradient($color-grey-light, $color-primary);
 		z-index: 1000;
 		transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+		@media only screen and (max-width: $bp-small) {
+			display: block;
+		}
 	}
 	&__nav {
 		height: 100vh;
 		position: fixed;
 		top: 0;
-		right: 0;
+		left: 0;
 		z-index: 1000;
 		opacity: 0;
 		width: 0;
-		transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	}
 
 	&__list {
@@ -236,6 +249,7 @@
 
 	&__item {
 		margin: 1rem;
+		display: none;
 	}
 	&__link {
 		&:link,
@@ -253,7 +267,6 @@
 				$color-orange 50%
 			);
 			background-size: 220%;
-			transition: all 0.4s;
 		}
 
 		span {
@@ -263,9 +276,14 @@
 
 		&:hover,
 		&:active {
+			transition: all 0.4s;
 			background-position: 100%;
 			transform: translateX(1rem);
 		}
+	}
+
+	input:checked ~ &__nav &__item {
+		display: block;
 	}
 
 	input:checked ~ &__bg {

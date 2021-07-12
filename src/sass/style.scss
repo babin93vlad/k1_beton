@@ -1,8 +1,6 @@
-@import "libs/bootstrap-reboot.min";
 @import "libs/slick-theme";
 @import "libs/slick";
 
-@import "base/variables";
 @import "base/general";
 @import "base/fonts";
 @import "base/animation";
@@ -15,7 +13,7 @@
 @import "layouts/header";
 @import "layouts/subheader";
 @import "layouts/subheader-logo";
-@import "layouts/product-about";
+@import "layouts/information";
 @import "layouts/advantages";
 @import "layouts/objects";
 @import "layouts/footer";

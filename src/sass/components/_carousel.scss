@@ -10,10 +10,10 @@
 		align-items: center;
 		transition: 0.7s all;
 
-		@media only screen and (max-width: $bp-medium) {
+		@media only screen and (max-width: $bp-small) {
 			max-width: 100%;
 			width: 100%;
-			margin: 0;
+			margin-top: 5rem;
 		}
 	}
 
@@ -49,6 +49,12 @@
 		img {
 			box-sizing: content-box;
 			margin: 0 auto;
+
+			@media only screen and (max-width: $bp-small) {
+				max-width: 10rem;
+				height: 7rem;
+				margin: 0;
+			}
 		}
 	}
 }

@@ -8,8 +8,6 @@
 	margin-top: 10.5rem;
 	border-radius: 5rem;
 	box-shadow: 0 0.2rem 0.6rem rgba($color-black, 0.1);
-	animation: moveToTop 1s ease-out 0.4s;
-	animation-fill-mode: backwards;
 
 	@media only screen and (max-width: $bp-laptop) {
 		display: none;
@@ -72,10 +70,5 @@
 	&__part {
 		margin-left: -0.7rem;
 		font-size: 1.9rem;
-	}
-
-	.active {
-		font-family: "Ubuntu Bold";
-		border-bottom: 5px solid $color-orange;
 	}
 }
