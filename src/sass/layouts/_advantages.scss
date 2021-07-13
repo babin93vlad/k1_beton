@@ -6,7 +6,7 @@
 	cursor: pointer;
 	transition: 0.3s;
 
-	@media only screen and (max-width: $bp-smallest) {
+	@media only screen and (max-width: $bp-small) {
 		margin-top: 5rem;
 	}
 
@@ -18,7 +18,7 @@
 		justify-content: space-between;
 		padding-bottom: 10rem;
 
-		@media only screen and (max-width: $bp-smallest) {
+		@media only screen and (max-width: $bp-small) {
 			flex-direction: column;
 			align-items: center;
 			padding-bottom: 3rem;
@@ -33,7 +33,7 @@
 		align-items: center;
 		text-align: center;
 
-		@media only screen and (max-width: $bp-smallest) {
+		@media only screen and (max-width: $bp-small) {
 			width: 100%;
 			flex-direction: row;
 			text-align: left;
@@ -43,12 +43,11 @@
 	}
 
 	&__img {
-
 		animation: moveToBottom 0.3s linear;
 		animation-delay: 0.35s;
 		animation-fill-mode: backwards;
 
-		@media only screen and (max-width: $bp-smallest) {
+		@media only screen and (max-width: $bp-small) {
 			animation: moveToRight 0.3s linear;
 		}
 	}
@@ -62,7 +61,7 @@
 		animation-fill-mode: backwards;
 		overflow: hidden;
 
-		@media only screen and (max-width: $bp-smallest) {
+		@media only screen and (max-width: $bp-small) {
 			display: flex;
 			font-size: 1.2rem;
 			width: 15rem;

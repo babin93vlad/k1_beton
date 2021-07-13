@@ -12,10 +12,9 @@ window.addEventListener("DOMContentLoaded", () => {
 	const animItems = document.querySelectorAll("._anim-items");
 	const infoItems = $(".information__item");
 
-	infoItems.each(function() {
+	infoItems.each(function () {
 		$(this).click(function () {
-
-			infoItems.each(function() {
+			infoItems.each(function () {
 				$(this).removeClass("information__triggered");
 				$(this).addClass("information__untriggered");
 			});
@@ -25,15 +24,15 @@ window.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	const observer = new IntersectionObserver(entries => {
-		entries.forEach(entry => {
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
-				entry.target.classList.add('_active');
+				entry.target.classList.add("_active");
 			}
 		});
 	});
 
-	animItems.forEach(animItem => {
+	animItems.forEach((animItem) => {
 		observer.observe(animItem);
 	});
 
@@ -61,9 +60,9 @@ window.addEventListener("DOMContentLoaded", () => {
 				arrow.attr("xlink:href", "img/sprite.svg#icon-arrow-thin-up");
 			}
 		});
-	}
+	};
 
-	showHide(advantages, advantagesBlock, advantagesArrow, advantagesItems  );
+	showHide(advantages, advantagesBlock, advantagesArrow, advantagesItems);
 	showHide(objects, objectBlock, objectsArrow, objectItems);
 });
 

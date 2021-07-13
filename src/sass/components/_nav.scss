@@ -147,7 +147,7 @@
 
 	&__icon {
 		position: relative;
-		margin-top: 3.5rem;
+		margin-top: 3rem;
 		&,
 		&::before,
 		&::after {
@@ -169,7 +169,7 @@
 			top: -0.8rem;
 		}
 		&::after {
-			top: 1rem;
+			top: 0.8rem;
 		}
 	}
 
@@ -194,10 +194,10 @@
 	}
 
 	&__btn:hover &__icon::before {
-		top: -2rem;
+		top: -0.8rem;
 	}
 	&__btn:hover &__icon::after {
-		top: 1rem;
+		top: 0.8rem;
 	}
 	&__checkbox:checked + &__btn &__icon {
 		background-color: transparent;

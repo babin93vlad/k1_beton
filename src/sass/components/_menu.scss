@@ -1,3 +1,7 @@
+.menu._anim-item {
+	animation: moveToBottom 0.6s;
+	transition: all 0.3s;
+}
 .menu {
 	display: flex;
 	align-items: center;
