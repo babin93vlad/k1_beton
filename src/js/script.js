@@ -8,6 +8,22 @@ window.addEventListener("DOMContentLoaded", () => {
 	const ruLangButton = document.querySelector(".nav__form.ru");
 	const roLangButton = document.querySelector(".nav__form.ro");
 	const animItems = document.querySelectorAll("._anim-items");
+	const infoItems = $(".information__item");
+
+	infoItems.each(function() {
+		$(this).click(function () {
+
+			infoItems.each(function() {
+				$(this).removeClass("information__triggered");
+				$(this).addClass("information__untriggered");
+			});
+
+			$(this).removeClass("information__untriggered");
+			$(this).addClass("information__triggered");
+		});
+	});
+
+
 
 	const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
@@ -24,13 +40,13 @@ window.addEventListener("DOMContentLoaded", () => {
 	ruLangButton.addEventListener("click", () => {
 		localStorage.setItem("language", "RU");
 		$(".ru-text").fadeIn();
-		$(".ro-text").fadeOut();
+		$(".ro-text").hide();
 	});
 
 	roLangButton.addEventListener("click", () => {
 		localStorage.setItem("language", "RO");
 		$(".ro-text").fadeIn();
-		$(".ru-text").fadeOut();
+		$(".ru-text").hide();
 	});
 
 	objects.addEventListener("click", () => {
@@ -77,12 +93,12 @@ $(document).ready(function () {
 		ruLangButton.prop("checked", true);
 		roLangButton.prop("checked", false);
 		$(".ru-text").fadeIn();
-		$(".ro-text").fadeOut();
+		$(".ro-text").hide();
 	} else {
 		roLangButton.prop("checked", true);
 		ruLangButton.prop("checked", false);
 		$(".ro-text").fadeIn();
-		$(".ru-text").fadeOut();
+		$(".ru-text").hide();
 	}
 
 	$(".carousel__inner").slick({

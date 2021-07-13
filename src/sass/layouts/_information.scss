@@ -21,15 +21,19 @@
 		// 	height: 9rem;
 		// 	bottom: 0;
 		// 	background-color: $color-white;
+	}
 
+	&__untriggered {
 		@media only screen and (max-width: $bp-medium) {
 			filter: blur(5px) brightness(80%);
 			margin: 0 0.5rem;
+		}
+	}
 
-			&:hover {
-				width: 100%;
-				filter: none;
-			}
+	&__triggered {
+		@media only screen and (max-width: $bp-medium) {
+			width: 100%;
+			filter: none;
 		}
 	}
 
