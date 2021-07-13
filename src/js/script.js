@@ -1,10 +1,12 @@
 window.addEventListener("DOMContentLoaded", () => {
-	const objectBlock = document.querySelector(".objects__block");
-	const objects = document.querySelector(".objects");
-	const advantagesBlock = document.querySelector(".advantages__block");
-	const advantages = document.querySelector(".advantages");
-	const objectsArrow = document.querySelector(".objects__icon");
-	const advantagesArrow = document.querySelector(".advantages__icon");
+	const objectBlock = $(".objects__block");
+	const objectItems = $(".objects__item");
+	const objects = $(".objects");
+	const advantagesBlock = $(".advantages__block");
+	const advantagesItems = $(".advantages__item");
+	const advantages = $(".advantages");
+	const objectsArrow = $(".objects__icon");
+	const advantagesArrow = $(".advantages__icon");
 	const ruLangButton = document.querySelector(".nav__form.ru");
 	const roLangButton = document.querySelector(".nav__form.ro");
 	const animItems = document.querySelectorAll("._anim-items");
@@ -22,8 +24,6 @@ window.addEventListener("DOMContentLoaded", () => {
 			$(this).addClass("information__triggered");
 		});
 	});
-
-
 
 	const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
@@ -49,37 +49,22 @@ window.addEventListener("DOMContentLoaded", () => {
 		$(".ru-text").hide();
 	});
 
-	objects.addEventListener("click", () => {
-		if (objectBlock.style.display === "block") {
-			objectBlock.style.display = "none";
-			objectsArrow.setAttribute(
-				"xlink:href",
-				"img/sprite.svg#icon-arrow-thin-down"
-			);
-		} else {
-			objectBlock.style.display = "block";
-			objectsArrow.setAttribute(
-				"xlink:href",
-				"img/sprite.svg#icon-arrow-thin-up"
-			);
-		}
-	});
+	const showHide = function (anchor, block, arrow, items) {
+		anchor.on("click", () => {
+			if (block.css("display") === "block") {
+				block.hide(350);
+				arrow.attr("xlink:href", "img/sprite.svg#icon-arrow-thin-down");
+				items.fadeOut(40);
+			} else {
+				items.show(0);
+				block.show(350);
+				arrow.attr("xlink:href", "img/sprite.svg#icon-arrow-thin-up");
+			}
+		});
+	}
 
-	advantages.addEventListener("click", () => {
-		if (advantagesBlock.style.display === "block") {
-			advantagesBlock.style.display = "none";
-			advantagesArrow.setAttribute(
-				"xlink:href",
-				"img/sprite.svg#icon-arrow-thin-down"
-			);
-		} else {
-			advantagesBlock.style.display = "block";
-			advantagesArrow.setAttribute(
-				"xlink:href",
-				"img/sprite.svg#icon-arrow-thin-up"
-			);
-		}
-	});
+	showHide(advantages, advantagesBlock, advantagesArrow, advantagesItems  );
+	showHide(objects, objectBlock, objectsArrow, objectItems);
 });
 
 $(document).ready(function () {

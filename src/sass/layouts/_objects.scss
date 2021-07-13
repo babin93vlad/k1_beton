@@ -20,7 +20,9 @@
 		padding-bottom: 10rem;
 		margin-top: 6.7rem;
 
-		animation: moveToBottom 0.4s;
+		animation: moveToBottom 0.3s linear;
+		animation-delay: 0.35s;
+		animation-fill-mode: backwards;
 	}
 
 	&__item {
