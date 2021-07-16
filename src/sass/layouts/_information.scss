@@ -15,13 +15,20 @@
 		overflow: hidden;
 		transition: all 0.4s;
 
-		// &::before {
-		// 	content: "";
-		// 	position: absolute;
-		// 	width: 100%;
-		// 	height: 9rem;
-		// 	bottom: 0;
-		// 	background-color: $color-white;
+		&:first-child._active {
+			animation: moveToBottom 0.4s;
+			animation-fill-mode: backwards;
+		}
+		&:nth-child(2)._active {
+			animation: moveToBottom 0.4s;
+			animation-delay: 0.5s;
+			animation-fill-mode: backwards;
+		}
+		&:last-child._active {
+			animation: moveToBottom 0.4s;
+			animation-delay: 1s;
+			animation-fill-mode: backwards;
+		}
 	}
 
 	&__untriggered {
